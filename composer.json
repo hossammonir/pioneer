@@ -1,0 +1,31 @@
+{
+    "name": "hossammonir/pioneer",
+    "description": "Pioneer ERP Integration",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "HossamMonir\\Pioneer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hossam H Monir",
+            "email": "hey@digitaltunnel.net"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "laravel/framework": "^10.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HossamMonir\\Pioneer\\PioneerServiceProvider"
+            ],
+            "aliases": {
+                "Pioneer": "HossamMonir\\Pioneer\\Facades\\Pioneer"
+            }
+        }
+    }
+}
