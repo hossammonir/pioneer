@@ -129,10 +129,10 @@ abstract class PioneerContract
      * @param int $ReceiptType
      * @return mixed
      */
-    protected function getPayments(int $EducationalYearID, int $SuperiorID, int $ReceiptType): mixed
+    protected function getReceipts(int $EducationalYearID, int $SuperiorID, int $ReceiptType): mixed
     {
         return Http::baseUrl($this->endpoint)->withToken($this->token)
-            ->post('/accounting/payments', [
+            ->post('/accounting/receipts', [
                 'EducationalYearID' => $EducationalYearID,
                 'SuperiorID' => $SuperiorID,
                 'ReceiptType' => $ReceiptType,

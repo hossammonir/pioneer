@@ -128,13 +128,13 @@ class PioneerServices extends PioneerContract
     }
 
     /**
-     * Get Payments for Superior
+     * Get Superior Payments & Refunds Receipts
      *
      * @return mixed
      */
-    public function payments(): mixed
+    public function receipts(): mixed
     {
-        return $this->getPayments(
+        return $this->getReceipts(
             EducationalYearID: $this->EducationalYearID,
             SuperiorID: $this->superior()['SuperiorID'],
             ReceiptType: $this->ReceiptType,
