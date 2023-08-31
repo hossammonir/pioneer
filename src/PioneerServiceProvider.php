@@ -9,7 +9,7 @@ class PioneerServiceProvider extends ServiceProvider
     public function register()
     {
         // Register a class in the service container
-        $this->app->bind('Pioneer', function () {
+        $this->app->singleton('Pioneer', function () {
             return new PioneerServices();
         });
     }
